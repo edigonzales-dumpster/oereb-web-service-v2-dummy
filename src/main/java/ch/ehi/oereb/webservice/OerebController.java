@@ -246,6 +246,42 @@ public class OerebController {
       {
           RestrictionOnLandownershipType foo = new RestrictionOnLandownershipType();
           ThemeType themeType = new ThemeType();
+          themeType.setCode("ch.Nutzungsplanung");
+          themeType.setSubCode("ch.SO.NutzungsplanungGrundnutzung");
+          themeType.setText(createMultilingualTextType("Nutzungsplanung Grundnutzung"));
+          foo.setTheme(themeType);
+          foo.setTypeCode("N111");
+          foo.setAreaShare(657);
+          foo.setTypeCodelist("urn:fdc:ilismeta.interlis.ch:2017:NP_Typ_Kanton_Grundnutzung.2601");
+          gs.getRestrictionOnLandownership().add(foo);
+      }
+      {
+          RestrictionOnLandownershipType foo = new RestrictionOnLandownershipType();
+          ThemeType themeType = new ThemeType();
+          themeType.setCode("ch.Nutzungsplanung");
+          themeType.setSubCode("ch.SO.NutzungsplanungGrundnutzung");
+          themeType.setText(createMultilingualTextType("Nutzungsplanung Grundnutzung"));
+          foo.setTheme(themeType);
+          foo.setTypeCode("N256");
+          foo.setAreaShare(657);
+          foo.setTypeCodelist("urn:fdc:ilismeta.interlis.ch:2017:NP_Typ_Kanton_Grundnutzung.2601");
+          gs.getRestrictionOnLandownership().add(foo);
+      }
+      {
+          RestrictionOnLandownershipType foo = new RestrictionOnLandownershipType();
+          ThemeType themeType = new ThemeType();
+          themeType.setCode("ch.Nutzungsplanung");
+          themeType.setSubCode("ch.SO.Baulinien");
+          themeType.setText(createMultilingualTextType("Baulinien (kantonal/kommunal)"));
+          foo.setTheme(themeType);
+          foo.setTypeCode("E201");
+          foo.setAreaShare(657);
+          foo.setTypeCodelist("urn:fdc:ilismeta.interlis.ch:2017:NP_Typ_Kanton_Erschliessung_Linienobjekt.2601");
+          gs.getRestrictionOnLandownership().add(foo);
+      }
+      {
+          RestrictionOnLandownershipType foo = new RestrictionOnLandownershipType();
+          ThemeType themeType = new ThemeType();
           themeType.setCode("ch.StatischeWaldgrenzen");
           themeType.setText(createMultilingualTextType("Statische Waldgrenzen"));
           foo.setTheme(themeType);
@@ -265,9 +301,30 @@ public class OerebController {
           foo.setAreaShare(200);
           gs.getRestrictionOnLandownership().add(foo);
       }
-      
-      
-      
+      {
+          RestrictionOnLandownershipType foo = new RestrictionOnLandownershipType();
+          ThemeType themeType = new ThemeType();
+          themeType.setCode("ch.SO.Einzelschutz");
+          themeType.setText(createMultilingualTextType("Einzelschutz"));
+          foo.setTheme(themeType);
+          foo.setTypeCode("geschütztes historisches Kulturdenkmal");
+          foo.setTypeCodelist("urn:fdc:ilismeta.interlis.ch:2019:Typ_geschuetztes_historisches_Kulturdenkmal_Flaeche");
+          foo.setAreaShare(123);
+          gs.getRestrictionOnLandownership().add(foo);
+      }
+      {
+          RestrictionOnLandownershipType foo = new RestrictionOnLandownershipType();
+          ThemeType themeType = new ThemeType();
+          themeType.setCode("ch.SO.Einzelschutz");
+          themeType.setText(createMultilingualTextType("Einzelschutz"));
+          foo.setTheme(themeType);
+          foo.setTypeCode("geschütztes historisches Kulturdenkmal");
+          foo.setTypeCodelist("urn:fdc:ilismeta.interlis.ch:2019:Typ_geschuetztes_historisches_Kulturdenkmal_Punkt");
+          foo.setAreaShare(44);
+          gs.getRestrictionOnLandownership().add(foo);
+      }
+
+      System.out.println("hallo");
       
       extractType.setRealEstate(gs);
 

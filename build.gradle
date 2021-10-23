@@ -59,6 +59,9 @@ dependencies {
 	compile	group: 'com.sun.xml.bind',name:'jaxb-impl', version:'2.3.2'
 	compile group: 'javax.activation', name: 'activation', version: '1.1.1'
     compile("org.springframework.boot:spring-boot-starter-web:2.1.4.RELEASE")
+    compile("org.springframework.boot:spring-boot-devtools:2.1.4.RELEASE")
+implementation group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.1.4.RELEASE'
+
     //compile("org.springframework.boot:spring-boot-starter-jdbc:2.1.4.RELEASE")
     compile("org.springframework:spring-oxm:5.1.6.RELEASE")
     compile('org.springframework.boot:spring-boot-starter-test:2.1.4.RELEASE')
